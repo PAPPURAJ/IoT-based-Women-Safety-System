@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "256949159562",
+    "firebase_url": "https://gpstracker-19d1d-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "gpstracker-19d1d",
+    "storage_bucket": "gpstracker-19d1d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:256949159562:android:9c47e1700f91ffb04f0f73",
+        "android_client_info": {
+          "package_name": "com.blogspot.rajbtc.gasmonitoring"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "256949159562-esur9lbtvnctv6hnbjijvqsvfgn8g7a3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBN1icjWsuHZ5_zOngycx1TBoipIGxLS34"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "256949159562-esur9lbtvnctv6hnbjijvqsvfgn8g7a3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
