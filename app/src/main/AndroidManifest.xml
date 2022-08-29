@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.blogspot.rajbtc.gasmonitoring">
+    package="com.blogspot.rajbtc.women_safety">
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -16,7 +16,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
-            android:name=".SplashScreen"
+            android:name="com.blogspot.rajbtc.women_safety.SplashScreen"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -36,9 +36,7 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBJJFxmwizFS_Z_EnZCqdcI8VJNSxbhe_o" />
 
-        <activity android:name=".MapsActivity"/>
-        <activity
-            android:name=".IntroActivity"/>
+        <activity android:name="com.blogspot.rajbtc.women_safety.MapsActivity"/>
     </application>
 
 </manifest>
