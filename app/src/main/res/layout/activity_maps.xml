@@ -17,5 +17,12 @@
 
     </fragment>
 
+    <Switch
+        android:id="@+id/satViewBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="Satellite" />
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

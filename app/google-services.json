@@ -1,34 +1,34 @@
 {
   "project_info": {
-    "project_number": "169528720110",
-    "firebase_url": "https://womensafety-3c8c4-default-rtdb.asia-southeast1.firebasedatabase.app",
-    "project_id": "womensafety-3c8c4",
-    "storage_bucket": "womensafety-3c8c4.appspot.com"
+    "project_number": "1044946474559",
+    "firebase_url": "https://womensafety-64980-default-rtdb.firebaseio.com",
+    "project_id": "womensafety-64980",
+    "storage_bucket": "womensafety-64980.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:169528720110:android:57bbb842771b15893d11ff",
+        "mobilesdk_app_id": "1:1044946474559:android:e2f3b6723c85b18a740a8a",
         "android_client_info": {
-          "package_name": "com.blogspot.rajbtc.women_safety"
+          "package_name": "com.blogspot.rajbtc.women__safety"
         }
       },
       "oauth_client": [
         {
-          "client_id": "169528720110-grfb9ieid0nsoe6gcsien3aeie7lnbef.apps.googleusercontent.com",
+          "client_id": "1044946474559-6cjed9bjl30a2nlh0aurct7of6rsuvnu.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCTvn_9ow3I6iYbMLrdEzNRueNuMdlDEOs"
+          "current_key": "AIzaSyA9vbTXKpB7f2uX5ftHorKBLkEDax7WfLU"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "169528720110-grfb9ieid0nsoe6gcsien3aeie7lnbef.apps.googleusercontent.com",
+              "client_id": "1044946474559-6cjed9bjl30a2nlh0aurct7of6rsuvnu.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
