@@ -56,15 +56,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
-        satVButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+        satVButton.setOnCheckedChangeListener((compoundButton, b) -> {
 
-                if (b == true) {
-                    mMap.setMapType(mMap.MAP_TYPE_HYBRID);
-                } else {
-                    mMap.setMapType(mMap.MAP_TYPE_NORMAL);
-                }
+            if (b == true) {
+                mMap.setMapType(mMap.MAP_TYPE_HYBRID);
+            } else {
+                mMap.setMapType(mMap.MAP_TYPE_NORMAL);
             }
         });
 
@@ -90,8 +87,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 {
                     if(!mediaPlayer.isPlaying())
                         mediaPlayer.start();;
-                }else
-                    mediaPlayer.stop();
+                }
             }
 
             @Override
