@@ -1,76 +1,67 @@
 #include "FirebaseESP8266.h"
 #include <ESP8266WiFi.h>
-
-#define FIREBASE_HOST "gpstracker-19d1d-default-rtdb.asia-southeast1.firebasedatabase.app" 
-#define FIREBASE_AUTH "sNjAU8g0npggSY4HKawFvbDYvFLNli15FrMfQQoU"
-#define WIFI_SSID "DUET CSE"
-#define WIFI_PASSWORD "1111111111"
-
-#include<SoftwareSerial.h>
 #include <TinyGPS++.h>
+
+#define FIREBASE_HOST "womensafety-3c8c4-default-rtdb.asia-southeast1.firebasedatabase.app"  
+#define FIREBASE_AUTH "wuf9uMLtYgO2djjjI0Fwlv5mdvyXBWBEeD1PTDHr"
+
+#define WIFI_SSID "Women Safety"     
+#define WIFI_PASSWORD "12345678" 
+
 
 FirebaseData firebaseData;
 FirebaseJson json;
 
-SoftwareSerial myS(0,2);
-
-double Lat=10,Lon=11;
+double lattitude,longitude;
 TinyGPSPlus gps;
 
 
 
-void writeDB(String field,String value){
- Firebase.setString(firebaseData, "/Location/"+field,value );
-  
-}
-
-
-
-
-
-
-
 void setup() {
-  myS.begin(9600);
   
+  pinMode(0,INPUT_PULLUP);
+  pinMode(2,OUTPUT);
   Serial.begin(9600);
   WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
-  Serial.print("Connecting to Wi-Fi");
   
   while (WiFi.status() != WL_CONNECTED)
   {
-    Serial.print(".");
-    delay(300);
+  digitalWrite(2,0);
+    delay(200);
+    digitalWrite(2,1);
+    delay(200);
+
+    Serial.println(analogRead(A0));
+    
   }
-  
-  Serial.println();
-  Serial.print("Connected with IP: ");
-  Serial.println(WiFi.localIP());
-  Serial.println();
 
   Firebase.begin(FIREBASE_HOST, FIREBASE_AUTH);
   Firebase.reconnectWiFi(true);
-  writeDB("Test","Ok");
 
 }
 
 void loop() {
   
-   while(myS.available())              //While there are incoming characters  from the GPS
+   while(Serial.available())
   {
-    gps.encode(myS.read());           //This feeds the serial NMEA data into the library one char at a time
+    gps.encode(Serial.read());  
   }
-  if(gps.location.isUpdated())          //This will pretty much be fired all the time anyway but will at least reduce it to only after a package of NMEA data comes in
+  if(gps.location.isUpdated())  
   {
+    digitalWrite(2,0);
    
-    Lat=gps.location.lat();
-    Lon=gps.location.lng();
-    Serial.println(Lat,6);
-    Serial.println(Lon,6);
+    lattitude=gps.location.lat();
+    longitude=gps.location.lng();
 
-    writeDB("Lat",String(Lat,6));
-    writeDB("Lon",String(Lon,6));
+    Firebase.setString(firebaseData, "/Location/Lat",String(lattitude,6) );
+    delay(100);
+    Firebase.setString(firebaseData, "/Location/Lon",String(longitude,6) );
+    delay(100);
+    digitalWrite(2,1);
 
   }
+
+  Firebase.setString(firebaseData, "/Danger",String(!digitalRead(0)));
+  delay(300);
 
 }
