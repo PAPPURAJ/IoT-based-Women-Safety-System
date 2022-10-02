@@ -8,7 +8,7 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "com.blogspot.rajbtc.women__safety"
+        applicationId "com.blogspot.rajbtc.women_safety"
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 1

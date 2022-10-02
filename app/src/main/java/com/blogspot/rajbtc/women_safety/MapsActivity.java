@@ -1,4 +1,4 @@
-package com.blogspot.rajbtc.women__safety;
+package com.blogspot.rajbtc.women_safety;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -7,9 +7,6 @@ import androidx.fragment.app.FragmentActivity;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
-import android.widget.Button;
-import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.Toast;
 
